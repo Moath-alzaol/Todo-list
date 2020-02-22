@@ -22,14 +22,13 @@ userSchema.methods.hachPassword = function(password){
 }
 
 
-
-const sortUser = new mongoose.Schema({
-    red    : [{type : String}],
-    yellow : [{type : String}],
-    blue   : [{type : String}],
-    green  : [{type : String}],
-    white  : [{type : String}]
+const  sortUser = new mongoose.Schema({
+    task    : String, 
+    label   : String,
+    user_id : String,
+    // user_id: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 });
+
 
 
 module.exports.User = mongoose.model('User' , userSchema);
